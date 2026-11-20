@@ -4,248 +4,287 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#263c32">
-  <meta name="description" content="לטייל בגאורגיה עם זורה שטירישוילי, נהג ומדריך דובר עברית. טיולי יום מטביליסי, מסלולי קיץ וחורף, טבע, קולינריה ותרבות מקומית.">
-  <meta property="og:title" content="TRAVEL WITH ZURA | גאורגיה בעברית">
-  <meta property="og:description" content="הרים, אנשים וטעמים. בואו להכיר את גאורגיה עם זורה, נהג ומדריך דובר עברית.">
+  <meta name="description" content="לטייל בגאורגיה עם זורה שטירישוילי, נהג ומדריך דובר עברית. טיולי יום מטביליסי, מסלולי קיץ וחורף, טבע, קולינריה ותרבות מקומית." data-i18n-content="metaDescription">
+  <meta property="og:title" content="TRAVEL WITH ZURA | גאורגיה בעברית" data-i18n-content="pageTitle">
+  <meta property="og:description" content="הרים, אנשים וטעמים. בואו להכיר את גאורגיה עם זורה, נהג ומדריך דובר עברית." data-i18n-content="socialDescription">
   <meta property="og:type" content="website">
-  <title>TRAVEL WITH ZURA | גאורגיה בעברית</title>
+  <title data-i18n="pageTitle">TRAVEL WITH ZURA | גאורגיה בעברית</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="site-data.js" defer></script>
+  <script src="translations.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">דלגו לתוכן</a>
+  <svg class="flag-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="flag-en" viewBox="0 0 60 40">
+      <path fill="#012169" d="M0 0h60v40H0z"/>
+      <path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40"/>
+      <path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40"/>
+      <path stroke="#fff" stroke-width="13" d="M30 0v40M0 20h60"/>
+      <path stroke="#c8102e" stroke-width="7" d="M30 0v40M0 20h60"/>
+    </symbol>
+    <symbol id="flag-ka" viewBox="0 0 60 40">
+      <path fill="#fff" d="M0 0h60v40H0z"/>
+      <path fill="#d50032" d="M27 0h6v40h-6zM0 17h60v6H0z"/>
+      <path stroke="#d50032" stroke-width="2.5" d="M14 4v9M9.5 8.5h9M46 4v9M41.5 8.5h9M14 27v9M9.5 31.5h9M46 27v9M41.5 31.5h9"/>
+    </symbol>
+    <symbol id="flag-ru" viewBox="0 0 60 40">
+      <path fill="#fff" d="M0 0h60v40H0z"/>
+      <path fill="#0039a6" d="M0 13.33h60v13.34H0z"/>
+      <path fill="#d52b1e" d="M0 26.67h60V40H0z"/>
+    </symbol>
+    <symbol id="flag-he" viewBox="0 0 60 40">
+      <path fill="#fff" d="M0 0h60v40H0z"/>
+      <path fill="#0038b8" d="M0 4h60v4H0zM0 32h60v4H0z"/>
+      <path fill="none" stroke="#0038b8" stroke-width="2" d="m30 10-10 17h20zm0 20 10-17H20z"/>
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#main" data-i18n="skipLink">דלגו לתוכן</a>
   <header class="site-header">
     <div class="header-inner container">
-      <a class="brand" href="#home" aria-label="TRAVEL WITH ZURA — לעמוד הבית">
+      <a class="brand" href="#home" aria-label="TRAVEL WITH ZURA — לעמוד הבית" data-i18n-aria-label="brandHome">
         <img src="assets/logo.jpg" alt="" width="65" height="60">
         <strong lang="en" dir="ltr">TRAVEL WITH ZURA</strong>
       </a>
-      <nav aria-label="ניווט ראשי">
-        <a href="#about">נעים להכיר</a>
-        <a href="#tours">הטיולים שלנו</a>
-        <a href="#gallery">רגעים מהדרך</a>
-        <a href="#reviews">המלצות</a>
+      <nav aria-label="ניווט ראשי" data-i18n-aria-label="navLabel">
+        <a href="#about" data-i18n="navAbout">נעים להכיר</a>
+        <a href="#tours" data-i18n="navTours">הטיולים שלנו</a>
+        <a href="#gallery" data-i18n="navGallery">רגעים מהדרך</a>
+        <a href="#reviews" data-i18n="navReviews">המלצות</a>
       </nav>
+      <details class="language-switcher" hidden>
+        <summary aria-label="בחירת שפה: עברית">
+          <svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><use href="#flag-he"></use></svg>
+          <span class="language-current" lang="he" dir="rtl">עברית</span>
+          <span class="language-code" aria-hidden="true">HE</span>
+          <span class="language-chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <div class="language-menu" role="group" aria-label="בחירת שפה">
+          <button type="button" data-language="en" lang="en" dir="ltr" aria-pressed="false"><svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><use href="#flag-en"></use></svg><span>English</span></button>
+          <button type="button" data-language="ka" lang="ka" dir="ltr" aria-pressed="false"><svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><use href="#flag-ka"></use></svg><span>ქართული</span></button>
+          <button type="button" data-language="ru" lang="ru" dir="ltr" aria-pressed="false"><svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><use href="#flag-ru"></use></svg><span>Русский</span></button>
+          <button type="button" data-language="he" lang="he" dir="ltr" aria-pressed="true"><svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false"><use href="#flag-he"></use></svg><span dir="rtl">עברית</span></button>
+        </div>
+      </details>
     </div>
   </header>
   <main id="main">
-    <section class="hero" id="home" aria-label="נופי גאורגיה">
-      <img class="hero-image" src="assets/photo-12.jpg" alt="עמק ירוק בין הרי הקווקז, ונהר מתפתל למרגלות ההרים" width="960" height="720" fetchpriority="high">
+    <section class="hero" id="home" aria-label="נופי גאורגיה" data-i18n-aria-label="heroLabel">
+      <img class="hero-image" src="assets/photo-12.jpg" alt="עמק ירוק בין הרי הקווקז ונהר מתפתל למרגלות ההרים" data-i18n-alt="heroImageAlt" width="960" height="720" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="container hero-content">
         <div class="button-row">
-          <a class="button button-sun" href="#tours">המסלולים שלנו<span aria-hidden="true">←</span></a>
+          <a class="button button-sun" href="#tours"><span data-i18n="heroTours">המסלולים שלנו</span><span aria-hidden="true">←</span></a>
         </div>
-        <div class="hero-note"><span class="status-dot" aria-hidden="true"></span> מדריך דובר עברית/רוסית/גרוזינית · יוצאים מטביליסי · מסלולי קיץ וחורף</div>
+        <div class="hero-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroNote">מדריך דובר עברית, רוסית וגאורגית · יוצאים מטביליסי · מסלולי קיץ וחורף</span></div>
       </div>
-      <div class="hero-caption" lang="en" dir="ltr">GEORGIA, THROUGH LOCAL EYES <span aria-hidden="true">/ 01</span></div>
+      <div class="hero-caption"><span data-i18n="heroCaption">גאורגיה דרך עיניים מקומיות</span><span aria-hidden="true">/ 01</span></div>
     </section>
     <div class="intro-strip">
       <div class="container strip-grid">
-        <div><span class="strip-icon" aria-hidden="true">↗</span><span><strong>בקצב שלכם</strong><small>גם מסלולים בהתאמה אישית</small></span></div>
-        <div><span class="strip-icon" aria-hidden="true">◎</span><span><strong>מרגישים בבית</strong><small>הדרכה בעברית, רוסית וגאורגית</small></span></div>
-        <div><span class="strip-icon" aria-hidden="true">♧</span><span><strong>הרבה מעבר לנוף</strong><small>טבע, תרבות וקולינריה מקומית</small></span></div>
+        <div><span class="strip-icon" aria-hidden="true">↗</span><span><strong data-i18n="stripPaceTitle">בקצב שלכם</strong><small data-i18n="stripPaceText">גם מסלולים בהתאמה אישית</small></span></div>
+        <div><span class="strip-icon" aria-hidden="true">◎</span><span><strong data-i18n="stripWelcomeTitle">מרגישים בבית</strong><small data-i18n="stripWelcomeText">הדרכה בעברית, ברוסית ובגאורגית</small></span></div>
+        <div><span class="strip-icon" aria-hidden="true">♧</span><span><strong data-i18n="stripBeyondTitle">הרבה מעבר לנוף</strong><small data-i18n="stripBeyondText">טבע, תרבות וקולינריה מקומית</small></span></div>
       </div>
     </div>
     <section class="section container about-grid" id="about" aria-labelledby="about-title">
       <div class="about-visual">
-        <img class="about-photo" src="assets/photo-42.jpg" alt="רגע משותף של מטיילים בשדה פרחים בגאורגיה" width="1200" height="900" loading="lazy">
-        <div class="about-stamp"><span lang="en" dir="ltr">GAMARJOBA!</span><strong>נעים להכיר :)</strong></div>
+        <img class="about-photo" src="assets/photo-42.jpg" alt="רגע משותף של מטיילים בשדה פרחים בגאורגיה" data-i18n-alt="aboutImageAlt" width="1200" height="900" loading="lazy">
+        <div class="about-stamp"><span data-i18n="aboutGreeting">גמארג׳ובה!</span><strong data-i18n="aboutStamp">נעים להכיר :)</strong></div>
       </div>
       <div class="about-copy">
-        <h2 id="about-title">נעים להכיר,</h2>
-        <p>אני זורה שטירישוילי, נהג ומדריך טיולים בגאורגיה. נולדתי בגאורגיה, עליתי לישראל עם משפחתי וחייתי בארץ כמעט 20 שנה. לאחר מכן חזרתי לגאורגיה, וכיום אני מתגורר בטביליסי עם אשתי.</p>
-        <p>כ־7 שנים אני מדריך מטיילים ישראלים ברחבי גאורגיה. בטיולים שלי אני משלב נופים מרהיבים עם חוויות מקומיות: ארוחה טובה, מפגש עם תושבי המקום ועצירות מיוחדות בדרך.</p>
-        <p>אני מדריך בעברית, ברוסית ובגאורגית, ומציע שירות אדיב עם חיוך. ניתן לתאם רכב שמספר המושבים בו מתאים לגודל הקבוצה, ולבחור בין טיולי טבע ותרבות לבין פעילויות אקסטרים.</p>
+        <h2 id="about-title" data-i18n="aboutTitle">נעים להכיר!</h2>
+        <p data-i18n="aboutBio1">אני זורה שטירישוילי, נהג ומדריך טיולים בגאורגיה. נולדתי בגאורגיה, עליתי לישראל עם משפחתי וחייתי בארץ כמעט 20 שנה. לאחר מכן חזרתי לגאורגיה, וכיום אני מתגורר בטביליסי עם אשתי.</p>
+        <p data-i18n="aboutBio2">כבר כשבע שנים אני מדריך מטיילים ישראלים ברחבי גאורגיה. בטיולים שלי אני משלב נופים מרהיבים עם חוויות מקומיות: ארוחה טובה, מפגש עם תושבי המקום ועצירות מיוחדות בדרך.</p>
+        <p data-i18n="aboutBio3">אני מדריך בעברית, ברוסית ובגאורגית ומציע שירות אדיב עם חיוך. אפשר לתאם רכב עם מספר מושבים המתאים לגודל הקבוצה ולבחור בין טיולי טבע ותרבות לבין פעילויות אקסטרים.</p>
       </div>
     </section>
     <section class="tours-section section" id="tours" aria-labelledby="tours-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">יוצאים לדרך</p>
-            <h2 id="tours-title">ארבע דרכים להתאהב בגאורגיה</h2>
+            <p class="eyebrow" data-i18n="toursEyebrow">יוצאים לדרך</p>
+            <h2 id="tours-title" data-i18n="toursTitle">ארבע דרכים להתאהב בגאורגיה</h2>
           </div>
-          <p>טיולי יום בחורף היוצאים מטביליסי.<br>כל מסלול מציע חוויה אחרת.</p>
+          <p><span data-i18n="toursIntro1">טיולי יום בחורף עם יציאה מטביליסי.</span><br><span data-i18n="toursIntro2">כל מסלול מציע חוויה אחרת.</span></p>
         </div>
-        <div class="tour-timing"><span class="pill">מסלולי חורף</span><span>יציאה משוערת: <bdi>10:00</bdi></span><span>חזרה משוערת: <bdi>19:00</bdi></span><small>השעות עשויות להשתנות בהתאם לבקשתכם ולתנאי השטח.</small></div>
+        <div class="tour-timing"><span class="pill" data-i18n="toursWinter">מסלולי חורף</span><span><span data-i18n="toursDeparture">יציאה משוערת:</span> <bdi>10:00</bdi></span><span><span data-i18n="toursReturn">חזרה משוערת:</span> <bdi>19:00</bdi></span><small data-i18n="toursTimingNote">השעות עשויות להשתנות בהתאם לבקשתכם ולתנאי השטח.</small></div>
         <div class="tour-grid">
           <article class="tour-card">
-            <div class="tour-image-wrap"><img src="assets/photo-04.jpg" alt="פסגה מושלגת מעל העיירה באזור קזבגי" width="900" height="1200" loading="lazy"><span class="image-label">הרים ונופים</span><span class="tour-number" aria-hidden="true">01</span></div>
+            <div class="tour-image-wrap"><img src="assets/photo-04.jpg" alt="פסגה מושלגת מעל העיירה באזור קזבגי" data-i18n-alt="tour1ImageAlt" width="900" height="1200" loading="lazy"><span class="image-label" data-i18n="tour1Label">הרים ונופים</span><span class="tour-number" aria-hidden="true">01</span></div>
             <div class="tour-body">
-              <p class="tour-meta">טיול יום · 130 ק״מ עד למונומנט החברות</p>
-              <h3>הדרך הצבאית וגודאורי</h3>
-              <p>עולים אל הקווקז הגבוה בדרך נופית העוברת בין אגמים, מנזרים ונהרות, עם עצירות בתצפיות פנורמיות — עד למונומנט החברות.</p>
+              <p class="tour-meta" data-i18n="tour1Meta">טיול יום · 130 ק״מ עד למונומנט החברות</p>
+              <h3 data-i18n="tour1Title">הדרך הצבאית וגודאורי</h3>
+              <p data-i18n="tour1Description">עולים אל הרי הקווקז בדרך נופית העוברת לצד אגמים, מנזרים ונהרות. בדרך למונומנט החברות עוצרים בנקודות תצפית פנורמיות.</p>
               <details class="tour-details">
-                <summary>מה מחכה לנו בדרך? <span aria-hidden="true">+</span></summary>
+                <summary><span data-i18n="tourDetailsSummary">מה מחכה לנו בדרך?</span> <span aria-hidden="true">+</span></summary>
                 <div>
                   <ul>
-                    <li>נופי הדרך הצבאית וביקור באנאנורי ובג׳ווארי.</li>
-                    <li>אגם ז׳ינוולי, פסנאורי ועצירות בתצפיות לאורך הדרך.</li>
-                    <li>גודאורי ומונומנט החברות.</li>
-                    <li>אפשרות לטיולי טרקטורונים ולרחיפה במצנח רחיפה; בקיץ ניתן לשלב גם רפטינג, בהתאם לתנאים ובתיאום מראש.</li>
-                    <li>עצירה לארוחת צהריים או ערב בסגנון מקומי בדרך חזרה.</li>
+                    <li data-i18n="tour1Stop1">נופי הדרך הצבאית וביקור באנאנורי ובג׳ווארי.</li>
+                    <li data-i18n="tour1Stop2">אגם ז׳ינוולי, פסנאורי ועצירות בנקודות תצפית לאורך הדרך.</li>
+                    <li data-i18n="tour1Stop3">גודאורי ומונומנט החברות.</li>
+                    <li data-i18n="tour1Stop4">אפשרות לטיולי טרקטורונים ולמצנחי רחיפה; בקיץ אפשר לשלב גם רפטינג, בהתאם לתנאים ובתיאום מראש.</li>
+                    <li data-i18n="tour1Stop5">עצירה לארוחת צהריים או ערב בסגנון מקומי בדרך חזרה.</li>
                   </ul>
-                  <p>הגעה לקזבגי (כ־150 ק״מ) אפשרית בתיאום מראש או כשמתכננים להישאר שם ללינה. מסלול החורף הרגיל מגיע עד למונומנט החברות.</p>
+                  <p data-i18n="tour1Note">אפשר להגיע לקזבגי (כ־150 ק״מ) בתיאום מראש או אם מתכננים ללון שם. מסלול החורף הרגיל מגיע עד למונומנט החברות.</p>
                 </div>
               </details>
             </div>
           </article>
           <article class="tour-card">
-            <div class="tour-image-wrap"><img src="assets/photo-62.jpg" alt="דוכן צבעוני עם פירות וצ׳ורצ׳חלה בשוק בגאורגיה" width="1200" height="900" loading="lazy"><span class="image-label">יין וטעמים מקומיים</span><span class="tour-number" aria-hidden="true">02</span></div>
+            <div class="tour-image-wrap"><img src="assets/photo-62.jpg" alt="דוכן צבעוני עם פירות וצ׳ורצ׳חלה בשוק בגאורגיה" data-i18n-alt="tour2ImageAlt" width="1200" height="900" loading="lazy"><span class="image-label" data-i18n="tour2Label">יין וטעמים מקומיים</span><span class="tour-number" aria-hidden="true">02</span></div>
             <div class="tour-body">
-              <p class="tour-meta">טיול יום · 140 ק״מ עד קווארלי</p>
-              <h3>דרך היין — קאחתי</h3>
-              <p>יום של טעמים בחבל היין של גאורגיה: יקב, לחם טרי, שוק מקומי וסיור בסיגנגי, עיר האהבה.</p>
+              <p class="tour-meta" data-i18n="tour2Meta">טיול יום · 140 ק״מ עד קווארלי</p>
+              <h3 data-i18n="tour2Title">דרך היין — קאחתי</h3>
+              <p data-i18n="tour2Description">יום של טעמים בחבל היין של גאורגיה: יקב, לחם טרי, שוק מקומי וסיור בסיגנגי, עיר האהבה.</p>
               <details class="tour-details">
-                <summary>מה מחכה לנו בדרך? <span aria-hidden="true">+</span></summary>
+                <summary><span data-i18n="tourDetailsSummary">מה מחכה לנו בדרך?</span> <span aria-hidden="true">+</span></summary>
                 <div>
                   <ol>
-                    <li>עצירה לפונצ׳יקי בטעם וניל.</li>
-                    <li>ביקור ביקב KTW וטעימות יין, ברנדי וצ׳אצ׳א ללא תשלום. ניתן גם לרכוש מוצרים מהיקב.</li>
-                    <li>שוטי פורי: לומדים איך מכינים לחם גאורגי. אפשר להשתתף בהכנה וליהנות מלחם עם תוספות בתשלום, וגם לרכוש גבינות.</li>
-                    <li>ביקור בשוק פירות וירקות מקומי.</li>
-                    <li>סיור בסיגנגי, העיירה ההיסטורית, כולל הפארק וחומות העיר. ניתן לתאם גם סיור בטרקטורונים.</li>
+                    <li data-i18n="tour2Stop1">עצירה לפונצ׳יקי בטעם וניל.</li>
+                    <li data-i18n="tour2Stop2">ביקור ביקב KTW וטעימות יין, ברנדי וצ׳אצ׳א ללא תשלום. ניתן גם לרכוש מוצרים מהיקב.</li>
+                    <li data-i18n="tour2Stop3">שוטי פורי: לומדים איך מכינים לחם גאורגי. אפשר להשתתף בהכנה, ליהנות מלחם עם תוספות בתשלום ולרכוש גבינות.</li>
+                    <li data-i18n="tour2Stop4">ביקור בשוק פירות וירקות מקומי.</li>
+                    <li data-i18n="tour2Stop5">סיור בסיגנגי, העיירה ההיסטורית, כולל הפארק וחומות העיר. ניתן לתאם גם סיור בטרקטורונים.</li>
                   </ol>
-                  <p>בתיאום מראש ניתן להוסיף סדנת בישול וארוחת צהריים בבית של אנה, שבה לומדים להכין חצ׳פורי, חינקלי, צ׳ורצ׳חלה ולחם. הסדנה בתשלום; ניתן להזמין גם מוזיקה חיה.</p>
+                  <p data-i18n="tour2Note">בתיאום מראש אפשר להוסיף סדנת בישול וארוחת צהריים בבית של אנה. בסדנה לומדים להכין חצ׳פורי, חינקלי, צ׳ורצ׳חלה ולחם. הסדנה בתשלום, ואפשר להזמין גם מוזיקה חיה.</p>
                 </div>
               </details>
             </div>
           </article>
           <article class="tour-card">
-            <div class="tour-image-wrap"><img src="assets/photo-47.jpg" alt="טיול רכיבה על סוסים בשביל מיוער בגאורגיה" width="1200" height="900" loading="lazy"><span class="image-label">טבע ומעיינות</span><span class="tour-number" aria-hidden="true">03</span></div>
+            <div class="tour-image-wrap"><img src="assets/photo-47.jpg" alt="טיול רכיבה על סוסים בשביל מיוער בגאורגיה" data-i18n-alt="tour3ImageAlt" width="1200" height="900" loading="lazy"><span class="image-label" data-i18n="tour3Label">טבע ומעיינות</span><span class="tour-number" aria-hidden="true">03</span></div>
             <div class="tour-body">
-              <p class="tour-meta">טיול יום · 160 ק״מ עד בורג׳ומי</p>
-              <h3>בורג׳ומי והטבע שסביבה</h3>
-              <p>ביקור בעיירת המרפא הירוקה ובמעיינות המפורסמים של בורג׳ומי, לצד טיולים בטבע. יום המשלב היסטוריה, פארקים ואוויר הרים.</p>
+              <p class="tour-meta" data-i18n="tour3Meta">טיול יום · 160 ק״מ עד בורג׳ומי</p>
+              <h3 data-i18n="tour3Title">בורג׳ומי והטבע שסביבה</h3>
+              <p data-i18n="tour3Description">ביקור בעיירת המרפא הירוקה ובמעיינות המפורסמים של בורג׳ומי, לצד טיולים בטבע. יום המשלב היסטוריה, פארקים ואוויר הרים.</p>
               <details class="tour-details">
-                <summary>מה מחכה לנו בדרך? <span aria-hidden="true">+</span></summary>
+                <summary><span data-i18n="tourDetailsSummary">מה מחכה לנו בדרך?</span> <span aria-hidden="true">+</span></summary>
                 <div>
                   <ul>
-                    <li>עצירות באופליסציחה ובמוזיאון סטאלין בדרך לבורג׳ומי.</li>
-                    <li>ביקור בפארק הלאומי בורג׳ומי–חראגאולי, עם אפשרות לטיול רגלי של כשלוש שעות או לרכיבה על סוסים בתיאום מראש.</li>
-                    <li>הפארק המרכזי של בורג׳ומי: מעיינות המים הטבעיים, רכבל ואטרקציות לילדים.</li>
-                    <li>אפשרות לרפטינג בנהר ולטיול ברכב באגי של כשעתיים באזור, הכולל מעיינות גופרית, מפל ותצפית פנורמית.</li>
-                    <li>עצירה לארוחת צהריים או ערב בדרך חזרה.</li>
+                    <li data-i18n="tour3Stop1">עצירות באופליסציחה ובמוזיאון סטאלין בדרך לבורג׳ומי.</li>
+                    <li data-i18n="tour3Stop2">ביקור בפארק הלאומי בורג׳ומי–חראגאולי, עם אפשרות לטיול רגלי של כשלוש שעות או לרכיבה על סוסים בתיאום מראש.</li>
+                    <li data-i18n="tour3Stop3">הפארק המרכזי של בורג׳ומי: מעיינות טבעיים, רכבל ואטרקציות לילדים.</li>
+                    <li data-i18n="tour3Stop4">אפשרות לרפטינג בנהר ולטיול ברכב באגי של כשעתיים באזור, הכולל מעיינות גופרית, מפל ותצפית פנורמית.</li>
+                    <li data-i18n="tour3Stop5">עצירה לארוחת צהריים או ערב בדרך חזרה.</li>
                   </ul>
-                  <p>הפעילויות והעצירות ייבחרו בתיאום ובהתאם לזמן העומד לרשותכם, לעונה ולתנאי השטח.</p>
+                  <p data-i18n="tour3Note">הפעילויות והעצירות ייבחרו בתיאום ובהתאם לזמן העומד לרשותכם, לעונה ולתנאי השטח.</p>
                 </div>
               </details>
             </div>
           </article>
           <article class="tour-card">
-            <div class="tour-image-wrap"><img src="assets/photo-05.jpg" alt="נוף קניון בגאורגיה — תמונת אווירה, לא גשר היהלום" width="1200" height="900" loading="lazy"><span class="image-label">יום של הרפתקה</span><span class="tour-number" aria-hidden="true">04</span><span class="illustration-label">תמונת אווירה</span></div>
+            <div class="tour-image-wrap"><img src="assets/photo-05.jpg" alt="נוף קניון בגאורגיה — תמונת אווירה, לא גשר היהלום" data-i18n-alt="tour4ImageAlt" width="1200" height="900" loading="lazy"><span class="image-label" data-i18n="tour4Label">יום של הרפתקה</span><span class="tour-number" aria-hidden="true">04</span><span class="illustration-label" data-i18n="tourImageIllustration">תמונת אווירה</span></div>
             <div class="tour-body">
-              <p class="tour-meta">טיול יום · 100 ק״מ</p>
-              <h3>גשר היהלום וקניון דשבשי</h3>
-              <p>ביקור בגשר זכוכית מעל קניון מרהיב, עם בר תלוי בצורת יהלום ונוף פראי מסביב. מסלול למי שאוהב לראות את הדברים מזווית אחרת.</p>
+              <p class="tour-meta" data-i18n="tour4Meta">טיול יום · 100 ק״מ</p>
+              <h3 data-i18n="tour4Title">גשר היהלום וקניון דשבשי</h3>
+              <p data-i18n="tour4Description">ביקור בגשר זכוכית מעל קניון מרהיב, עם בר תלוי בצורת יהלום ונוף פראי מסביב. מסלול למי שאוהב לראות את הדברים מזווית אחרת.</p>
               <details class="tour-details">
-                <summary>מה מחכה לנו בדרך? <span aria-hidden="true">+</span></summary>
+                <summary><span data-i18n="tourDetailsSummary">מה מחכה לנו בדרך?</span> <span aria-hidden="true">+</span></summary>
                 <div>
                   <ul>
-                    <li>נסיעה ישירה לגשר היהלום.</li>
-                    <li>ביקור בגשר הזכוכית ובקניון דשבשי.</li>
-                    <li>אפשרות לרכיבה על אופניים באוויר ולעלייה על נדנדה ענקית.</li>
-                    <li>אפשרות לארוחת צהריים במסעדה שבמתחם.</li>
+                    <li data-i18n="tour4Stop1">נסיעה ישירה לגשר היהלום.</li>
+                    <li data-i18n="tour4Stop2">ביקור בגשר הזכוכית ובקניון דשבשי.</li>
+                    <li data-i18n="tour4Stop3">אפשרות לרכיבה על אופניים באוויר ולעלייה על נדנדת ענק.</li>
+                    <li data-i18n="tour4Stop4">אפשרות לארוחת צהריים במסעדה שבמתחם.</li>
                   </ul>
-                  <p>יש לבדוק מראש את זמינות האטרקציות, את תנאי ההשתתפות ואת העלויות.</p>
+                  <p data-i18n="tour4Note">יש לבדוק מראש את זמינות האטרקציות, את תנאי ההשתתפות ואת העלויות.</p>
                 </div>
               </details>
             </div>
           </article>
         </div>
-        <p class="tour-disclaimer">אזכור של ארוחה או אטרקציה אינו מעיד שהיא כלולה במחיר. זמינות הפעילויות תלויה בעונה ובמזג האוויר.</p>
+        <p class="tour-disclaimer" data-i18n="toursDisclaimer">אזכור של ארוחה או אטרקציה אינו מעיד שהיא כלולה במחיר. זמינות הפעילויות תלויה בעונה ובמזג האוויר.</p>
         <div class="custom-tour">
-          <div><span class="eyebrow">הטיול שלכם, בדרך שלכם</span>
-            <h3>יש לכם משהו אחר בראש?</h3>
-            <p>אפשר לבנות מסלול אישי ולתאם פעילויות כמו ג׳יפים, טרקטורונים, סקוטרים, רכיבה על סוסים או יום של תרבות וקולינריה.</p>
-          </div><a class="button" data-tour="טיול בהתאמה אישית" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer">מתכננים יחד <span aria-hidden="true">↗</span></a>
+          <div><span class="eyebrow" data-i18n="customEyebrow">הטיול שלכם, בדרך שלכם</span>
+            <h3 data-i18n="customTitle">יש לכם משהו אחר בראש?</h3>
+            <p data-i18n="customDescription">אפשר לבנות מסלול אישי ולתאם טיולי ג׳יפים וטרקטורונים, רכיבה על סקוטרים או סוסים, או יום של תרבות וקולינריה.</p>
+          </div><a class="button" data-tour="טיול בהתאמה אישית" data-i18n-tour="customTourName" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><span data-i18n="customButton">מתכננים יחד</span> <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
     <section class="section container" aria-labelledby="destinations-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">עוד מקומות בדרך</p>
-          <h2 id="destinations-title">גאורגיה, בכל הגוונים שלה</h2>
+          <p class="eyebrow" data-i18n="destinationsEyebrow">עוד מקומות בדרך</p>
+          <h2 id="destinations-title" data-i18n="destinationsTitle">גאורגיה, בכל הגוונים שלה</h2>
         </div>
-        <p>יעדים נוספים לטיולים בתיאום אישי.<br>פרטי המסלול, מועד הטיול ומשכו ייקבעו יחד.</p>
+        <p><span data-i18n="destinationsIntro1">יעדים נוספים לטיולים בתיאום אישי.</span><br><span data-i18n="destinationsIntro2">פרטי המסלול, מועד הטיול ומשכו ייקבעו יחד.</span></p>
       </div>
       <div class="destination-grid">
-        <a class="destination" data-tour="קזבגי" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-15.jpg" alt="נופי הרים באזור קזבגי" loading="lazy" width="900" height="1200">
+        <a class="destination" data-tour="קזבגי" data-i18n-tour="destination1Name" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-15.jpg" alt="נופי הרים באזור קזבגי" data-i18n-alt="destination1ImageAlt" loading="lazy" width="900" height="1200">
           <div><small lang="en" dir="ltr">KAZBEGI</small>
-            <h3>קזבגי</h3><span>אל הקווקז הגבוה ↗</span>
+            <h3 data-i18n="destination1Name">קזבגי</h3><span data-i18n="destination1Tag">אל הקווקז הגבוה ↗</span>
           </div>
         </a>
-        <a class="destination" data-tour="מרטווילי" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-17.jpg" alt="סירות במים ירוקים בין קירות קניון" loading="lazy" width="1200" height="900">
+        <a class="destination" data-tour="מרטווילי" data-i18n-tour="destination2Name" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-17.jpg" alt="סירות במים ירוקים בין קירות קניון" data-i18n-alt="destination2ImageAlt" loading="lazy" width="1200" height="900">
           <div><small lang="en" dir="ltr">MARTVILI</small>
-            <h3>מרטווילי</h3><span>מים, קניונים וירוק ↗</span>
+            <h3 data-i18n="destination2Name">מרטווילי</h3><span data-i18n="destination2Tag">מים, קניונים וירוק ↗</span>
           </div>
         </a>
-        <a class="destination" data-tour="סוואנתי" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-24.jpg" alt="כפר עם מגדלי אבן למרגלות הרים בסוואנתי" loading="lazy" width="1200" height="900">
+        <a class="destination" data-tour="סוואנתי" data-i18n-tour="destination3Name" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-24.jpg" alt="כפר עם מגדלי אבן למרגלות הרים בסוואנתי" data-i18n-alt="destination3ImageAlt" loading="lazy" width="1200" height="900">
           <div><small lang="en" dir="ltr">SVANETI</small>
-            <h3>סוואנתי</h3><span>כפרים ומגדלים בין ההרים ↗</span>
+            <h3 data-i18n="destination3Name">סוואנתי</h3><span data-i18n="destination3Tag">כפרים ומגדלים בין ההרים ↗</span>
           </div>
         </a>
-        <a class="destination" data-tour="בורג׳ומי" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-43.jpg" alt="רכב טיולים בשביל ירוק ומיוער" loading="lazy" width="1200" height="900">
+        <a class="destination" data-tour="בורג׳ומי" data-i18n-tour="destination4Name" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><img src="assets/photo-43.jpg" alt="רכב טיולים בשביל ירוק ומיוער" data-i18n-alt="destination4ImageAlt" loading="lazy" width="1200" height="900">
           <div><small lang="en" dir="ltr">BORJOMI</small>
-            <h3>בורג׳ומי</h3><span>טבע, שבילים ומעיינות ↗</span>
+            <h3 data-i18n="destination4Name">בורג׳ומי</h3><span data-i18n="destination4Tag">טבע, שבילים ומעיינות ↗</span>
           </div>
         </a>
       </div>
     </section>
-    <section class="gallery-section section" id="gallery" aria-label="גלריית תמונות">
+    <section class="gallery-section section" id="gallery" aria-label="גלריית תמונות" data-i18n-aria-label="galleryLabel">
       <div class="container">
         <div class="gallery-grid" id="gallery-preview"></div>
         <details class="more-gallery">
-          <summary class="button button-outline">לכל התמונות מהטיולים <span aria-hidden="true">+</span></summary>
+          <summary class="button button-outline"><span data-i18n="galleryMore">לכל התמונות מהטיולים</span> <span aria-hidden="true">+</span></summary>
           <div class="gallery-grid" id="gallery-more"></div>
         </details>
         <noscript>
           <p>להצגת האלבום המלא יש לאפשר JavaScript בדפדפן.</p><img src="assets/photo-29.jpg" alt="כפר בין הרי הקווקז" width="600" height="450" loading="lazy">
         </noscript>
         <details class="video-section">
-          <summary><span><strong>סרטונים מהטיולים</strong></span><span class="video-count">11 סרטונים <span aria-hidden="true">+</span></span></summary>
+          <summary><span><strong data-i18n="videoTitle">סרטונים מהטיולים</strong></span><span class="video-count"><span data-i18n="videoCount">11 סרטונים</span> <span aria-hidden="true">+</span></span></summary>
           <div class="video-grid" id="video-grid"></div>
         </details>
       </div>
     </section>
     <section class="section container reviews-section" id="reviews" aria-labelledby="reviews-title">
-      <h2 id="reviews-title">המלצות של המטיילים שלנו</h2>
+      <h2 id="reviews-title" data-i18n="reviewsTitle">המלצות של המטיילים שלנו</h2>
       <div class="review-grid" id="review-list"></div>
       <div class="reviews-empty" id="reviews-empty"><span class="quote-mark" aria-hidden="true">״</span>
-        <h3>ההמלצות שלכם יופיעו כאן</h3>
-        <p>המלצות יתווספו לאחר קבלת חוות דעת אמיתיות ואישור לפרסומן.</p><a class="text-link" data-tour="שיתוף חוויה והמלצה מהטיול" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer">טיילתם עם זורה? שתפו אותו בחוויה שלכם <span aria-hidden="true">←</span></a>
+        <h3 data-i18n="reviewsEmptyTitle">ההמלצות שלכם יופיעו כאן</h3>
+        <p data-i18n="reviewsEmptyText">המלצות יתווספו לאחר קבלת חוות דעת אמיתיות ואישור לפרסומן.</p><a class="text-link" data-contact="review" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer"><span data-i18n="reviewShare">טיילתם עם זורה? שתפו אותו בחוויה שלכם</span> <span aria-hidden="true">←</span></a>
       </div>
     </section>
     <section class="faq-section section">
       <div class="container faq-grid">
         <div>
-          <p class="eyebrow">לפני שיוצאים</p>
-          <h2 id="faq-title">שאלות נפוצות</h2>
+          <p class="eyebrow" data-i18n="faqEyebrow">לפני שיוצאים</p>
+          <h2 id="faq-title" data-i18n="faqTitle">שאלות נפוצות</h2>
         </div>
         <div class="faq-list" aria-labelledby="faq-title">
           <details>
-            <summary>באילו שפות מתקיימת ההדרכה?<span aria-hidden="true">+</span></summary>
-            <p>זורה מדריך בעברית, ברוסית ובגאורגית.</p>
+            <summary><span data-i18n="faqQ1">באילו שפות מתקיימת ההדרכה?</span><span aria-hidden="true">+</span></summary>
+            <p data-i18n="faqA1">זורה מדריך בעברית, ברוסית ובגאורגית.</p>
           </details>
           <details>
-            <summary>מהיכן יוצאים ומתי חוזרים?<span aria-hidden="true">+</span></summary>
-            <p>ארבעת טיולי היום בחורף יוצאים מטביליסי. שעת היציאה המשוערת היא 10:00, והחזרה היא בסביבות 19:00. השעות עשויות להשתנות בהתאם לבקשתכם ולתנאי השטח. את נקודת האיסוף מתאמים ישירות עם זורה.</p>
+            <summary><span data-i18n="faqQ2">מהיכן יוצאים ומתי חוזרים?</span><span aria-hidden="true">+</span></summary>
+            <p data-i18n="faqA2">ארבעת טיולי היום בחורף יוצאים מטביליסי. שעת היציאה המשוערת היא 10:00, והחזרה היא בסביבות 19:00. השעות עשויות להשתנות בהתאם לבקשתכם ולתנאי השטח. את נקודת האיסוף מתאמים ישירות עם זורה.</p>
           </details>
           <details>
-            <summary>אפשר להתאים את הטיול לקבוצה שלנו?<span aria-hidden="true">+</span></summary>
-            <p>כן. ניתן לבנות מסלול אישי ולתאם רכב עם מספר מקומות בהתאם להרכב המטיילים. ספרו לזורה כמה אנשים מגיעים, באילו תאריכים ומה תרצו לחוות.</p>
+            <summary><span data-i18n="faqQ3">אפשר להתאים את הטיול לקבוצה שלנו?</span><span aria-hidden="true">+</span></summary>
+            <p data-i18n="faqA3">כן. אפשר לבנות מסלול אישי ולתאם רכב עם מספר מושבים המתאים לגודל הקבוצה. ספרו לזורה כמה אנשים מגיעים, באילו תאריכים ומה תרצו לחוות.</p>
           </details>
           <details>
-            <summary>כמה עולה הטיול ומה כלול במחיר?<span aria-hidden="true">+</span></summary>
-            <p>יש לקבל הצעת מחיר ישירות מזורה ולוודא אילו שירותים כלולים בה: הסעה, דמי כניסה, ארוחות ופעילויות. הסדנה בבית של אנה והלחם עם התוספות בקאחתי כרוכים בתשלום; הטעימות ביקב KTW מוצעות ללא תשלום, בהתאם לפרטי המסלול.</p>
+            <summary><span data-i18n="faqQ4">כמה עולה הטיול ומה כלול במחיר?</span><span aria-hidden="true">+</span></summary>
+            <p data-i18n="faqA4">בקשו הצעת מחיר ישירות מזורה ובדקו אילו שירותים כלולים בה: הסעה, דמי כניסה, ארוחות ופעילויות. הסדנה בבית של אנה והלחם עם התוספות בקאחתי כרוכים בתשלום; הטעימות ביקב KTW מוצעות ללא תשלום, בהתאם לפרטי המסלול.</p>
           </details>
           <details>
-            <summary>האם כל האטרקציות פועלות גם בחורף?<span aria-hidden="true">+</span></summary>
-            <p>לא בהכרח. פעילויות כמו רפטינג, רחיפה וטיולי שטח תלויות בעונה, במזג האוויר ובזמינות. יש לאשר את הפעילויות המבוקשות לפני הטיול.</p>
+            <summary><span data-i18n="faqQ5">האם כל האטרקציות פועלות גם בחורף?</span><span aria-hidden="true">+</span></summary>
+            <p data-i18n="faqA5">לא בהכרח. פעילויות כמו רפטינג, רחיפה וטיולי שטח תלויות בעונה, במזג האוויר ובזמינות. יש לאשר את הפעילויות המבוקשות לפני הטיול.</p>
           </details>
         </div>
       </div>
@@ -254,26 +293,26 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div><strong lang="en" dir="ltr">TRAVEL WITH ZURA</strong></div>
-      <a href="#home">בחזרה למעלה <span aria-hidden="true">↑</span></a>
+      <a href="#home"><span data-i18n="footerTop">בחזרה למעלה</span> <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
   <details class="accessibility-widget">
-    <summary class="accessibility-toggle" aria-label="אפשרויות נגישות" title="אפשרויות נגישות">
+    <summary class="accessibility-toggle" aria-label="אפשרויות נגישות" title="אפשרויות נגישות" data-i18n-aria-label="accessibilityLabel" data-i18n-title="accessibilityLabel">
       <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
         <circle cx="16" cy="5.5" r="2.7" fill="currentColor" />
         <path d="M14.2 10.1 8 8.3a1.8 1.8 0 0 0-1 3.5l7.2 2.1v7.4l-5 7a1.8 1.8 0 1 0 2.9 2.1l4.3-5.8 4.5 5.8a1.8 1.8 0 1 0 2.8-2.2l-5.1-7v-7.3l7.1-2.1a1.8 1.8 0 0 0-1-3.5l-6.1 1.8a6 6 0 0 0-4.4 0Z" fill="currentColor" transform="translate(0 -2)" />
       </svg>
     </summary>
-    <div class="accessibility-menu" role="group" aria-label="אפשרויות נגישות">
-      <button type="button" data-accessibility-action="large-text" aria-pressed="false">הגדלת תצוגה</button>
-      <button type="button" data-accessibility-action="high-contrast" aria-pressed="false">ניגודיות גבוהה</button>
-      <button type="button" data-accessibility-action="underline-links" aria-pressed="false">הדגשת קישורים</button>
-      <button type="button" data-accessibility-action="reset">איפוס תצוגה</button>
+    <div class="accessibility-menu" role="group" aria-label="אפשרויות נגישות" data-i18n-aria-label="accessibilityLabel">
+      <button type="button" data-accessibility-action="large-text" aria-pressed="false" data-i18n="accessibilityLarge">הגדלת התצוגה</button>
+      <button type="button" data-accessibility-action="high-contrast" aria-pressed="false" data-i18n="accessibilityContrast">ניגודיות גבוהה</button>
+      <button type="button" data-accessibility-action="underline-links" aria-pressed="false" data-i18n="accessibilityLinks">הדגשת קישורים</button>
+      <button type="button" data-accessibility-action="reset" data-i18n="accessibilityReset">איפוס תצוגה</button>
     </div>
   </details>
-  <a class="floating-contact" data-contact="whatsapp" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer" aria-label="צרו קשר ב־WhatsApp"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+  <a class="floating-contact" data-contact="whatsapp" href="https://wa.me/995591625500" target="_blank" rel="noopener noreferrer" aria-label="צרו קשר ב־WhatsApp" data-i18n-aria-label="contactLabel"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
       <path d="M21 11.6a9 9 0 0 1-13.4 7.9L3 21l1.5-4.5A9 9 0 1 1 21 11.6Z" />
       <path d="M8 7.5c-1.6 2.8 3 7.4 5.8 8 .8.2 2.2-1.3 1.6-1.8l-1.7-1-1 .8c-1.5-.6-2.5-1.6-3.1-3.1l.8-1-1-1.7c-.3-.5-.8-.5-1.4-.2Z" />
-    </svg><span>צרו קשר</span></a>
+    </svg><span data-i18n="contactText">צרו קשר</span></a>
 </body>
 </html>

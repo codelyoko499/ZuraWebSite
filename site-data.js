@@ -33,7 +33,7 @@
   const previewPhotos = [
     { id: 29, caption: "כפרים בין ההרים" },
     { id: 19, caption: "ביחד בקניון" },
-    { id: 36, caption: "אגם בלב הנוף" },
+    { id: 36, caption: "אגם על רקע ההרים" },
     { id: 62, caption: "הצבעים של השוק" },
     { id: 12, caption: "הדרך היא חלק מהטיול" },
     { id: 54, caption: "חיוכים מהדרך" },
